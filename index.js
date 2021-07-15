@@ -5,7 +5,8 @@ const {getRandomId} = require("./HELPERS");
 const app = express()
 app.use(express.json()) //parse req body(json) to object
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
     console.log("Server Listening")
 })
 
