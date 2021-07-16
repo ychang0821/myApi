@@ -1,9 +1,11 @@
 const express = require('express');
+var cors = require('cors')
 const { db: destinations } = require("./DB");
 const {getRandomId} = require("./HELPERS");
 
 const app = express()
 app.use(express.json()) //parse req body(json) to object
+app.use(cors())
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
