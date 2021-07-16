@@ -46,7 +46,7 @@ app.put('/destinations', (req, res) => {
     }
 
     const dest = destinations[_id];
-    const {name, location, url, Description} = req.body;
+    const {name, location, url, description} = req.body;
 
     if (name !== undefined) {
         dest.name = name;
@@ -60,8 +60,8 @@ app.put('/destinations', (req, res) => {
         dest.url = url;
     }
 
-    if (Description !== undefined) {
-        dest.Description = Description;
+    if (description !== undefined) {
+        dest.description = description;
     }
     return res.status(200).send({status: "success"})
     
